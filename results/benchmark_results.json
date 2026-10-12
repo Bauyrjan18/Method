@@ -1,0 +1,202 @@
+[
+  {
+    "timestamp": "2026-10-12T12:35:25.851251+00:00",
+    "condition_id": "RandomForest__Full_46_Features",
+    "model": "RandomForest",
+    "feature_set": "Full_46_Features",
+    "feature_count": 46,
+    "train_samples": 8,
+    "test_samples": 2,
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "latency_batch1_ms": 11.7295,
+    "throughput_samples_sec": 85.25,
+    "ram_rss_mb": 159.11,
+    "ram_traced_peak_mb": 0.8844,
+    "guardrail_passed": true,
+    "performance_details": {
+      "batch_1": {
+        "avg_latency_ms": 11.7295,
+        "p99_latency_ms": 14.5413,
+        "per_sample_latency_ms": 11.7295,
+        "throughput_samples_sec": 85.25
+      },
+      "batch_16": {
+        "avg_latency_ms": 9.6337,
+        "p99_latency_ms": 10.3723,
+        "per_sample_latency_ms": 4.8168,
+        "throughput_samples_sec": 207.6
+      }
+    },
+    "guardrail_details": {
+      "f1_guardrail": {
+        "threshold": 0.95,
+        "measured": 1.0,
+        "passed": true
+      },
+      "ram_guardrail": {
+        "limit_mb": 256.0,
+        "measured": 159.11,
+        "passed": true
+      },
+      "latency_guardrail": {
+        "limit_ms": 15.0,
+        "measured": 11.7295,
+        "passed": true
+      },
+      "all_passed": true
+    }
+  },
+  {
+    "timestamp": "2026-10-12T12:35:27.126987+00:00",
+    "condition_id": "RandomForest__Top_10_Features",
+    "model": "RandomForest",
+    "feature_set": "Top_10_Features",
+    "feature_count": 10,
+    "train_samples": 8,
+    "test_samples": 2,
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "latency_batch1_ms": 11.3202,
+    "throughput_samples_sec": 88.34,
+    "ram_rss_mb": 156.76,
+    "ram_traced_peak_mb": 0.1604,
+    "guardrail_passed": true,
+    "performance_details": {
+      "batch_1": {
+        "avg_latency_ms": 11.3202,
+        "p99_latency_ms": 13.6247,
+        "per_sample_latency_ms": 11.3202,
+        "throughput_samples_sec": 88.34
+      },
+      "batch_16": {
+        "avg_latency_ms": 9.7198,
+        "p99_latency_ms": 10.5788,
+        "per_sample_latency_ms": 4.8599,
+        "throughput_samples_sec": 205.77
+      }
+    },
+    "guardrail_details": {
+      "f1_guardrail": {
+        "threshold": 0.95,
+        "measured": 1.0,
+        "passed": true
+      },
+      "ram_guardrail": {
+        "limit_mb": 256.0,
+        "measured": 156.76,
+        "passed": true
+      },
+      "latency_guardrail": {
+        "limit_ms": 15.0,
+        "measured": 11.3202,
+        "passed": true
+      },
+      "all_passed": true
+    }
+  },
+  {
+    "timestamp": "2026-10-12T12:35:27.213218+00:00",
+    "condition_id": "LightGBM__Full_46_Features",
+    "model": "LightGBM",
+    "feature_set": "Full_46_Features",
+    "feature_count": 46,
+    "train_samples": 8,
+    "test_samples": 2,
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "latency_batch1_ms": 1.722,
+    "throughput_samples_sec": 580.71,
+    "ram_rss_mb": 159.92,
+    "ram_traced_peak_mb": 1.1504,
+    "guardrail_passed": true,
+    "performance_details": {
+      "batch_1": {
+        "avg_latency_ms": 1.722,
+        "p99_latency_ms": 3.3259,
+        "per_sample_latency_ms": 1.722,
+        "throughput_samples_sec": 580.71
+      },
+      "batch_16": {
+        "avg_latency_ms": 1.6608,
+        "p99_latency_ms": 2.5043,
+        "per_sample_latency_ms": 0.8304,
+        "throughput_samples_sec": 1204.25
+      }
+    },
+    "guardrail_details": {
+      "f1_guardrail": {
+        "threshold": 0.95,
+        "measured": 1.0,
+        "passed": true
+      },
+      "ram_guardrail": {
+        "limit_mb": 256.0,
+        "measured": 159.92,
+        "passed": true
+      },
+      "latency_guardrail": {
+        "limit_ms": 15.0,
+        "measured": 1.722,
+        "passed": true
+      },
+      "all_passed": true
+    }
+  },
+  {
+    "timestamp": "2026-10-12T12:35:27.287189+00:00",
+    "condition_id": "LightGBM__Top_10_Features",
+    "model": "LightGBM",
+    "feature_set": "Top_10_Features",
+    "feature_count": 10,
+    "train_samples": 8,
+    "test_samples": 2,
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "precision_macro": 1.0,
+    "recall_macro": 1.0,
+    "latency_batch1_ms": 1.4785,
+    "throughput_samples_sec": 676.35,
+    "ram_rss_mb": 160.24,
+    "ram_traced_peak_mb": 1.0909,
+    "guardrail_passed": true,
+    "performance_details": {
+      "batch_1": {
+        "avg_latency_ms": 1.4785,
+        "p99_latency_ms": 2.1719,
+        "per_sample_latency_ms": 1.4785,
+        "throughput_samples_sec": 676.35
+      },
+      "batch_16": {
+        "avg_latency_ms": 1.4625,
+        "p99_latency_ms": 2.106,
+        "per_sample_latency_ms": 0.7312,
+        "throughput_samples_sec": 1367.56
+      }
+    },
+    "guardrail_details": {
+      "f1_guardrail": {
+        "threshold": 0.95,
+        "measured": 1.0,
+        "passed": true
+      },
+      "ram_guardrail": {
+        "limit_mb": 256.0,
+        "measured": 160.24,
+        "passed": true
+      },
+      "latency_guardrail": {
+        "limit_ms": 15.0,
+        "measured": 1.4785,
+        "passed": true
+      },
+      "all_passed": true
+    }
+  }
+]

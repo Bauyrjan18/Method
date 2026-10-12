@@ -1,0 +1,5 @@
+timestamp,condition_id,model,feature_set,feature_count,train_samples,test_samples,accuracy,f1_macro,precision_macro,recall_macro,latency_batch1_ms,throughput_samples_sec,ram_rss_mb,ram_traced_peak_mb,guardrail_passed
+2026-10-12T12:35:25.851251+00:00,RandomForest__Full_46_Features,RandomForest,Full_46_Features,46,8,2,1.0,1.0,1.0,1.0,11.7295,85.25,159.11,0.8844,True
+2026-10-12T12:35:27.126987+00:00,RandomForest__Top_10_Features,RandomForest,Top_10_Features,10,8,2,1.0,1.0,1.0,1.0,11.3202,88.34,156.76,0.1604,True
+2026-10-12T12:35:27.213218+00:00,LightGBM__Full_46_Features,LightGBM,Full_46_Features,46,8,2,1.0,1.0,1.0,1.0,1.722,580.71,159.92,1.1504,True
+2026-10-12T12:35:27.287189+00:00,LightGBM__Top_10_Features,LightGBM,Top_10_Features,10,8,2,1.0,1.0,1.0,1.0,1.4785,676.35,160.24,1.0909,True
