@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка методологии исследования</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 14mm 12mm 14mm 12mm;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1a202c;
+            line-height: 1.4;
+            font-size: 9.5pt;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 8px;
+            margin-bottom: 14px;
+        }
+        .badge {
+            display: inline-block;
+            background: #ebf8ff;
+            color: #2b6cb0;
+            font-weight: 700;
+            font-size: 8pt;
+            padding: 2px 7px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+        h1 {
+            font-size: 14pt;
+            font-weight: 700;
+            color: #1a365d;
+            margin: 0 0 4px 0;
+            line-height: 1.25;
+        }
+        .subtitle {
+            font-size: 10pt;
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px 14px;
+            font-size: 9pt;
+        }
+        .meta-item strong {
+            color: #2d3748;
+        }
+        h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #2b6cb0;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 3px;
+            margin-top: 14px;
+            margin-bottom: 8px;
+        }
+        h3 {
+            font-size: 9.5pt;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        p {
+            margin: 0 0 6px 0;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            font-size: 8.5pt;
+        }
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 5px 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        tr:nth-child(even) td {
+            background-color: #f7fafc;
+        }
+        ul {
+            margin: 0 0 6px 0;
+            padding-left: 18px;
+        }
+        li {
+            margin-bottom: 3px;
+        }
+        .box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 7px 12px;
+            margin: 6px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .box p {
+            margin: 0;
+        }
+        .guardrails-list strong {
+            color: #c53030;
+        }
+        .footer {
+            margin-top: 25px;
+            padding-top: 10px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 8.5pt;
+            color: #718096;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="badge">Research Methodology Passport • Task 2</div>
+        <h1>Карточка методологии исследования</h1>
+        <div class="subtitle">Сравнительный анализ алгоритмов машинного обучения (Random Forest vs LightGBM) для детекции аномалий и DDoS-атак в реальном времени в ресурсоограниченных сетях IoT</div>
+        
+        <div class="meta-grid">
+            <div class="meta-item"><strong>Автор:</strong> Балкыбек Бауыржан (индивидуальное выполнение)</div>
+            <div class="meta-item"><strong>Дисциплина:</strong> Методы научных исследований (IT)</div>
+            <div class="meta-item"><strong>GitHub-репозиторий:</strong> <a href="https://github.com/Bauyrjan18/Method">https://github.com/Bauyrjan18/Method</a></div>
+            <div class="meta-item"><strong>Целевой бенчмарк:</strong> CICIoT2023 Dataset</div>
+        </div>
+    </div>
+
+    <h2>1. Тип исследования и обоснование</h2>
+    <p>
+        <strong>Тип исследования:</strong> Количественное экспериментальное исследование (Quantitative Experimental Research).<br>
+        <strong>Обоснование выбора:</strong> Исследование направлено на объективную верификацию гипотез посредством контролируемого вычислительного эксперимента. Измеряются строго количественные зависимые переменные: метрики качества классификации (Macro F1-score, Precision, Recall), временные характеристики (Inference Latency в мс) и системные ресурсы (RAM в МБ). Качественные методы не обеспечивают статистической строгости при оценке компромисса (trade-off) между точностью и микросекундной задержкой инференса сетевых пакетов на периферийных IoT-шлюзах.
+    </p>
+
+    <h2>2. Формулировка гипотез</h2>
+    
+    <h3>Исследовательский вопрос 1 (RQ1 — Точность классификации)</h3>
+    <div class="box">
+        <p><strong>Нулевая гипотеза (H<sub>0,1</sub>):</strong> При классификации аномалий и DDoS-трафика алгоритм LightGBM не демонстрирует статистически значимого превосходства по F1-score по сравнению с Random Forest (F1<sub>LightGBM</sub> ≤ F1<sub>RandomForest</sub>).</p>
+        <p style="margin-top: 6px;"><strong>Альтернативная гипотеза (H<sub>1,1</sub>):</strong> Алгоритм гистограммного бустинга LightGBM обеспечивает статистически значимо более высокий Macro F1-score по сравнению с Random Forest при обработке атак высокой интенсивности (F1<sub>LightGBM</sub> &gt; F1<sub>RandomForest</sub>), достигая F1 ≥ 0.95.</p>
+    </div>
+
+    <h3>Исследовательский вопрос 2 (RQ2 — Редукция признаков и ресурсоэффективность)</h3>
+    <div class="box">
+        <p><strong>Нулевая гипотеза (H<sub>0,2</sub>):</strong> Редукция признакового пространства до топ-10 признаков не приводит к снижению задержки инференса на пакет и потребления RAM в LightGBM более эффективно, чем в Random Forest, либо вызывает недопустимую деградацию качества (F1 &lt; 0.95).</p>
+        <p style="margin-top: 6px;"><strong>Альтернативная гипотеза (H<sub>1,2</sub>):</strong> Сокращение пространства признаков до топ-10 уменьшает задержку инференса более чем на 30% и сокращает потребление RAM более чем на 25% в LightGBM по сравнению с Random Forest при сохранении порогового уровня F1 ≥ 0.95.</p>
+    </div>
+
+    <h2>3. Матрица переменных эксперимента</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 22%;">Категория</th>
+                <th style="width: 25%;">Переменная</th>
+                <th style="width: 23%;">Значения / Ед. изм.</th>
+                <th>Роль и операционализация</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Независимая</strong></td>
+                <td>ML-классификатор</td>
+                <td>RandomForest, LightGBM</td>
+                <td>Варьируемый класс ансамблевых алгоритмов (бэггинг vs градиентный бустинг).</td>
+            </tr>
+            <tr>
+                <td><strong>Независимая</strong></td>
+                <td>Размерность признаков</td>
+                <td>Full (46 фичей), Top-10</td>
+                <td>Варьируемый состав входного вектора потока для проверки гипотезы оптимизации.</td>
+            </tr>
+            <tr>
+                <td><strong>Независимая</strong></td>
+                <td>Размер батча инференса</td>
+                <td>N ∈ {1, 16}</td>
+                <td>Поштучный потоковый анализ пакетов (N=1) и микро-очереди (N=16).</td>
+            </tr>
+            <tr>
+                <td><strong>Зависимая</strong></td>
+                <td>Macro F1-Score</td>
+                <td>[0.0000, 1.0000]</td>
+                <td>Первичная метрика сбалансированной детекции классов сетевых аномалий.</td>
+            </tr>
+            <tr>
+                <td><strong>Зависимая</strong></td>
+                <td>Inference Latency</td>
+                <td>миллисекунды (мс) / образец</td>
+                <td>Среднее время и P99 принятия решения моделью по сетевому пакету.</td>
+            </tr>
+            <tr>
+                <td><strong>Зависимая</strong></td>
+                <td>Потребление RAM (RSS)</td>
+                <td>Мегабайты (МБ)</td>
+                <td>Резидентная память процесса и пиковый объем динамической памяти.</td>
+            </tr>
+            <tr>
+                <td><strong>Зависимая</strong></td>
+                <td>Throughput</td>
+                <td>образцов / сек</td>
+                <td>Пропускная способность конвейера классификации.</td>
+            </tr>
+            <tr>
+                <td><strong>Контролируемая</strong></td>
+                <td>Входной датасет</td>
+                <td>CICIoT2023</td>
+                <td>Фиксированный эталонный бенчмарк трафика IoT.</td>
+            </tr>
+            <tr>
+                <td><strong>Контролируемая</strong></td>
+                <td>Разбиение данных</td>
+                <td>Train/Test 80/20, Seed=42</td>
+                <td>Идентичные выборки для обучения и валидации всех моделей.</td>
+            </tr>
+            <tr>
+                <td><strong>Контролируемая</strong></td>
+                <td>Окружение</td>
+                <td>Docker, Python 3.12</td>
+                <td>Строго зафиксированные версии библиотек (pinned dependencies).</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Метрики, Пороговые ограничения (Guardrails) и Baseline</h2>
+    <ul>
+        <li><strong>Первичная метрика (Primary Metric):</strong> Macro F1-score (устойчивость детекции при дисбалансе классов) и Inference Latency на 1 образец (мс).</li>
+        <li><strong>Пороговые метрики (Guardrail Metrics):</strong>
+            <ul class="guardrails-list">
+                <li>Минимальное качество классификации: <strong>F1 ≥ 0.95</strong> (недопустимость пропуска атак).</li>
+                <li>Максимальный лимит оперативной памяти: <strong>Peak RAM ≤ 256.0 МБ</strong> (аппаратное ограничение edge-устройств).</li>
+                <li>Максимальная задержка на пакет: <strong>Latency ≤ 15.0 мс</strong> (предотвращение переполнения сетевых очередей).</li>
+                <li>Надежность конвейера: <strong>0% сбоев</strong> (отсутствие необработанных исключений).</li>
+            </ul>
+        </li>
+        <li><strong>Контрольная группа / Бэйзлайн (Baseline):</strong> Классический ансамбль <strong>Random Forest (RF)</strong> на <strong>полном наборе признаков (Full Feature Set — 46 признаков)</strong> со стандартной конфигурацией (<code>n_estimators=100</code>, <code>max_depth=15</code>). Выступает общепринятым индустриальным эталоном точности и стабильности в IDS.</li>
+    </ul>
+
+    <div class="footer">
+        <span>Методология исследования • Авторы: Бауыржан Балкыбек</span>
+        <span>Репозиторий: https://github.com/Bauyrjan18/Method</span>
+    </div>
+
+</body>
+</html>
